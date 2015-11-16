@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package contract;
-//tester giv mig det hele
+
 import contract.dto.EmployeeDetail;
 import contract.dto.EmployeeSummary;
 import contract.dto.PriceDetail;
