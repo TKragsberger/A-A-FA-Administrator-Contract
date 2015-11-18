@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package contract.dto;
+package contract.dto.reservation;
 
 import java.util.Date;
 

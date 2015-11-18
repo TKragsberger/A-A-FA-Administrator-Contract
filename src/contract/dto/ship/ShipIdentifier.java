@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package contract.dto;
+package contract.dto.ship;
 
 import java.io.Serializable;
 
@@ -11,10 +11,10 @@ import java.io.Serializable;
  *
  * @author Thomas
  */
-public class EmployeeIdentifier implements Serializable{
+public class ShipIdentifier implements Serializable{
     private final long id;
 
-    public EmployeeIdentifier(long id) {
+    public ShipIdentifier(long id) {
         this.id = id;
     }
 

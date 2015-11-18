@@ -1,4 +1,4 @@
-package contract.dto;
+package contract.dto.ship;
 
 import java.io.Serializable;
 
