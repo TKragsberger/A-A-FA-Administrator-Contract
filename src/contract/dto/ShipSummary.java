@@ -6,21 +6,12 @@ import java.io.Serializable;
  *
  * @author Thomas Kragsberger
  */
-public abstract class ShipSummary implements Serializable{
-    private long shipId;
+public abstract class ShipSummary extends ShipIdentifier{
     private String name;
 
     public ShipSummary(long shipId, String name){
-        this.shipId = shipId;
+        super(shipId);
         this.name = name;
-    }
-
-    public long getShipId(){
-        return shipId;
-    }
-
-    public void setShipId(long shipId){
-        this.shipId = shipId;
     }
 
     public String getName(){

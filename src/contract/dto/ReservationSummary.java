@@ -8,7 +8,7 @@ package contract.dto;
 import java.util.Date;
 
 
-public class ReservationSummary {
+public class ReservationSummary extends ReservationIdentifier{
     
     private Date date;
     private String ticketType;
@@ -17,7 +17,8 @@ public class ReservationSummary {
     private String email;
     private int routeId;
 
-    public ReservationSummary(Date date, String ticketType, String firstName, String lastName, String email, int routeId) {
+    public ReservationSummary(long id, Date date, String ticketType, String firstName, String lastName, String email, int routeId) {
+        super(id);
         this.date = date;
         this.ticketType = ticketType;
         this.firstName = firstName;

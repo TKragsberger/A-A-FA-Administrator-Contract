@@ -9,20 +9,19 @@ package contract.dto;
  * The employee detail tells about an employees position in the company and the 
  * salery he or she gets.
  */
-public class EmployeeDetail {
+public class EmployeeDetail extends EmployeeIdentifier{
     private String firstName;
     private String lastName;
     private String email;
     private double salery;
-    private long id;
     private String position;
 
     public EmployeeDetail(String firstName, String lastName, String email, double salery, long id, String position) {
+        super(id);
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.salery = salery;
-        this.id = id;
         this.position = position;
     }
 
@@ -56,14 +55,6 @@ public class EmployeeDetail {
 
     public void setSalery(double salery) {
         this.salery = salery;
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
     }
 
     public String getPosition() {

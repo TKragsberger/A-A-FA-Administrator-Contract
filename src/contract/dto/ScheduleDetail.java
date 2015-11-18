@@ -13,16 +13,15 @@ import java.util.Date;
  * The capacity will tell the administrtor how many people there are on board and if a bigger ship is needed.
  * Passengers tells the amount of passengers there are onboard.
  */
-public class ScheduleDetail {
-    private int id;
+public class ScheduleDetail extends ScheduleIdentifier{
     private int routeId;
     private int capacity;
     private int passengers;
     private int shipId;
     private Date date;
 
-    public ScheduleDetail(int id, int routeId, int capacity, int passengers, int shipId, Date date) {
-        this.id = id;
+    public ScheduleDetail(long id, int routeId, int capacity, int passengers, int shipId, Date date) {
+        super(id);
         this.routeId = routeId;
         this.capacity = capacity;
         this.passengers = passengers;
@@ -36,14 +35,6 @@ public class ScheduleDetail {
 
     public void setPassengers(int passengers) {
         this.passengers = passengers;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public int getRouteId() {

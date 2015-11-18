@@ -10,17 +10,16 @@ package contract.dto;
  * the passenger type will tell if the passenger is in a car, bus og is walking onboard,
  * how many passenger there are in a car
  */
-public class PriceDetail {
+public class PriceDetail extends PriceIdentifier{
     private String passengerType;
     private int numberOfPassengers;
     private double price;
-    private int id;
 
-    public PriceDetail(int id, String passengerType, int numberOfPassengers, double price) {
+    public PriceDetail(long id, String passengerType, int numberOfPassengers, double price) {
+        super(id);
         this.passengerType = passengerType;
         this.numberOfPassengers = numberOfPassengers;
         this.price = price;
-        this.id = id;
     }
 
     public String getPassengerType() {
@@ -45,9 +44,5 @@ public class PriceDetail {
 
     public void setPrice(double price) {
         this.price = price;
-    }
-
-    public int getId() {
-        return id;
     }
 }

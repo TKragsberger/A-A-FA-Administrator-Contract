@@ -12,9 +12,8 @@ import java.util.Date;
  * the ticket type tells if a passengers is in a vehicle or is walking onboard.
  * It also contains a date and a route the passenger has taken.
  */
-public class ReservationDetail {
+public class ReservationDetail extends ReservationIdentifier{
     
-    private long id;
     private Date date;
     private double price;
     private String ticketType;
@@ -24,7 +23,7 @@ public class ReservationDetail {
     private int routeId;
 
     public ReservationDetail(long id, Date date, double price, String ticketType, String firstName, String lastName, String email, int routeId) {
-        this.id = id;
+        super(id);
         this.date = date;
         this.price = price;
         this.ticketType = ticketType;
@@ -32,14 +31,6 @@ public class ReservationDetail {
         this.lastName = lastName;
         this.email = email;
         this.routeId = routeId;
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
     }
 
     public Date getDate() {

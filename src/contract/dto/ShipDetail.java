@@ -12,25 +12,16 @@ import java.util.Date;
  *
  * @author Thomas
  */
-public abstract class ShipDetail implements Serializable{
-    private long shipId;
+public abstract class ShipDetail extends ShipIdentifier{
     private int passengerCapacity;
     private String name;
     private Date lastMaintenance;
 
     public ShipDetail(long shipId, int passengerCapacity, String name, Date lastMaintenance) {
-        this.shipId = shipId;
+        super(shipId);
         this.passengerCapacity = passengerCapacity;
         this.name = name;
         this.lastMaintenance = lastMaintenance;
-    }
-
-    public long getShipId() {
-        return shipId;
-    }
-
-    public void setShipId(long shipId) {
-        this.shipId = shipId;
     }
 
     public String getName() {

@@ -11,13 +11,12 @@ import java.util.Date;
  *
  * @author Thomas
  */
-public class WeatherDetail {
+public class WeatherDetail extends WeatherIdentifier{
     private String weather;
-    private Date date;
 
-    public WeatherDetail(String weather, Date date) {
+    public WeatherDetail(Date date, String weather) {
+        super(date);
         this.weather = weather;
-        this.date = date;
     }
 
     public String getWeather() {
@@ -26,13 +25,5 @@ public class WeatherDetail {
 
     public void setWeather(String weather) {
         this.weather = weather;
-    }
-
-    public Date getDate() {
-        return date;
-    }
-
-    public void setDate(Date date) {
-        this.date = date;
     }
 }
