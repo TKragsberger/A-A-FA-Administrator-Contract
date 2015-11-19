@@ -12,6 +12,8 @@ import contract.dto.employee.EmployeeSummary;
 import contract.dto.price.PriceDetail;
 import contract.dto.reservation.ReservationDetail;
 import contract.dto.reservation.ReservationSummary;
+import contract.dto.route.RouteDetail;
+import contract.dto.route.RouteSummary;
 import contract.dto.schedule.ScheduleDetail;
 import contract.dto.schedule.ScheduleSummary;
 import contract.dto.ship.ShipDetail;
@@ -39,4 +41,6 @@ public interface DataRepository {
     public Collection<ShipSummary> getShips();
     public DepartmentDetail getDepartmentDetail(long id);
     public Collection<DepartmentSummary> getDepartmentSummaries();
+    public RouteDetail getRouteDetail(long id);
+    public Collection<RouteSummary> getRouteSummaries();
 }
