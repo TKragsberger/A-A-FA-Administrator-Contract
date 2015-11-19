@@ -5,6 +5,8 @@
  */
 package contract;
 
+import contract.dto.department.DepartmentDetail;
+import contract.dto.department.DepartmentSummary;
 import contract.dto.employee.EmployeeDetail;
 import contract.dto.employee.EmployeeSummary;
 import contract.dto.price.PriceDetail;
@@ -22,17 +24,19 @@ import java.util.Date;
 
 public interface DataRepository {
     public Collection<EmployeeSummary> getEmployees();
-    public EmployeeDetail getEmployee(int id);
+    public EmployeeDetail getEmployee(long id);
     public Collection<ScheduleSummary> getScheduleSummary(Date date);
-    public ScheduleDetail getScheduleDetail(Date date, int routeId);
+    public ScheduleDetail getScheduleDetail(Date date, long routeId);
     public Collection<PriceDetail> getPrices();
     public boolean removeEmployee(EmployeeDetail employee);
     public boolean updatePrice(PriceDetail updatedPrice);
     public boolean createEmployee(EmployeeDetail newEmployee);
     public Collection<ReservationSummary> getReservations(Date date);
-    public ReservationDetail getReservation(int id);
+    public ReservationDetail getReservation(long id);
     public WeatherDetail getWeatherDetail(Date date);
     public boolean updateEmployee(EmployeeDetail updatedEmployee);
-    public ShipDetail getShipDetail(int id);
+    public ShipDetail getShipDetail(long id);
     public Collection<ShipSummary> getShips();
+    public DepartmentDetail getDepartmentDetail(long id);
+    public Collection<DepartmentSummary> getDepartmentSummaries();
 }
