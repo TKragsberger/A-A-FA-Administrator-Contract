@@ -16,14 +16,16 @@ public class DepartureDetail extends DepartureIdentifier{
     private Collection<ReservationSummary> reservations;
     private int currentPassengers;
     private int currentVehicles;
+    private int currentLargeVehicles;
     
-    public DepartureDetail(long id, Date date, long routeId, Collection<ReservationSummary> reservations, int currentPassengers, int currentVehicles) {
+    public DepartureDetail(long id, Date date, long routeId, Collection<ReservationSummary> reservations, int currentPassengers, int currentVehicles, int currentLargeVehicles) {
         super(id);
         this.date = date;
         this.routeId = routeId;
         this.reservations = reservations;
         this.currentPassengers = currentPassengers;
         this.currentVehicles = currentVehicles;
+        this.currentLargeVehicles = currentLargeVehicles;
     }
 
     public Date getDate() {
@@ -66,6 +68,12 @@ public class DepartureDetail extends DepartureIdentifier{
         this.currentVehicles = currentVehicles;
     }
     
+    public int getCurrentLargeVehicles(){
+        return currentLargeVehicles;
+    }
     
+    public void setCurrentLargeVehicles(int currentLargeVehicles){
+        this.currentLargeVehicles = currentLargeVehicles;
+    }
     
 }

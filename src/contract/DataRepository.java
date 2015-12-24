@@ -7,6 +7,8 @@ package contract;
 
 import contract.dto.department.DepartmentDetail;
 import contract.dto.department.DepartmentSummary;
+import contract.dto.departure.DepartureDetail;
+import contract.dto.departure.DepartureSummary;
 import contract.dto.employee.EmployeeDetail;
 import contract.dto.employee.EmployeeSummary;
 import contract.dto.price.PriceDetail;
@@ -43,4 +45,6 @@ public interface DataRepository {
     public Collection<DepartmentSummary> getDepartmentSummaries();
     public RouteDetail getRouteDetail(long id);
     public Collection<RouteSummary> getRouteSummaries();
+    public DepartureDetail getDepartureDetail(long id);
+    public Collection<DepartureSummary> getDepartureSummaiers();
 }
