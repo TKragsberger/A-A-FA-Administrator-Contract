@@ -2,6 +2,7 @@ package contract.dto.departure;
 
 import contract.dto.reservation.ReservationSummary;
 import contract.dto.route.RouteDetail;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
 
@@ -18,11 +19,11 @@ public class DepartureDetail extends DepartureIdentifier{
     private int currentVehicles;
     private int currentLargeVehicles;
     
-    public DepartureDetail(long id, Date date, long routeId, Collection<ReservationSummary> reservations, int currentPassengers, int currentVehicles, int currentLargeVehicles) {
+    public DepartureDetail(long id, Date date, long routeId, int currentPassengers, int currentVehicles, int currentLargeVehicles) {
         super(id);
         this.date = date;
         this.routeId = routeId;
-        this.reservations = reservations;
+        this.reservations = new ArrayList<>();
         this.currentPassengers = currentPassengers;
         this.currentVehicles = currentVehicles;
         this.currentLargeVehicles = currentLargeVehicles;
@@ -76,4 +77,7 @@ public class DepartureDetail extends DepartureIdentifier{
         this.currentLargeVehicles = currentLargeVehicles;
     }
     
+    public void addReservation(ReservationSummary reservation){
+        this.reservations.add(reservation);
+    }
 }
