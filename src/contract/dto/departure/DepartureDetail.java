@@ -19,14 +19,14 @@ public class DepartureDetail extends DepartureIdentifier{
     private int currentVehicles;
     private int currentLargeVehicles;
     
-    public DepartureDetail(long id, Date date, long routeId, int currentPassengers, int currentVehicles, int currentLargeVehicles) {
+    public DepartureDetail(long id, Date date, long routeId) {
         super(id);
         this.date = date;
         this.routeId = routeId;
         this.reservations = new ArrayList<>();
-        this.currentPassengers = currentPassengers;
-        this.currentVehicles = currentVehicles;
-        this.currentLargeVehicles = currentLargeVehicles;
+        this.currentPassengers = 0;
+        this.currentVehicles = 0;
+        this.currentLargeVehicles = 0;
     }
 
     public Date getDate() {
@@ -79,5 +79,23 @@ public class DepartureDetail extends DepartureIdentifier{
     
     public void addReservation(ReservationSummary reservation){
         this.reservations.add(reservation);
+    }
+    
+    public void addPassengers(int numberOfPassengers){
+        for(int i = 0; i < numberOfPassengers; i++){
+            this.currentPassengers++;
+        }
+    }
+    
+    public void addVehicles(int numberOfVehicles){
+        for(int i = 0; i < numberOfVehicles; i++){
+            this.currentVehicles++;
+        }
+    }
+    
+    public void addLargeVehicles(int numberOfLargeVehicles){
+        for(int i = 0; i < numberOfLargeVehicles; i++){
+            this.currentLargeVehicles++;
+        }
     }
 }

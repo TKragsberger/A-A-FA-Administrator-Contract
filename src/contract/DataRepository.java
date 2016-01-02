@@ -47,4 +47,5 @@ public interface DataRepository {
     public Collection<RouteSummary> getRouteSummaries();
     public DepartureDetail getDepartureDetail(long id);
     public Collection<DepartureSummary> getDepartureSummaiers();
+    public void createDeparture(DepartureDetail departure);
 }
